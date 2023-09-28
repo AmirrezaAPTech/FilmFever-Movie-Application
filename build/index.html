@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FilmFever</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  />
+  <link rel="icon" href="./img/Logo.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+  </style>
+</head>
+<body class=" w-full max-w-[75%] max-[575px]:w-[100%] mx-auto bg-[#373b69] font-Poppins">
+  <!-- Header -->
+    <header class="flex justify-center items-center py-4 px-0">
+        <input
+          type="text"
+          class="search-input w-[350px] h-12 bg-transparent border border-solid border-[#708ed2] rounded-3xl py-3 px-4 text-#708ed2"
+          placeholder="Search Movies"
+          spellcheck="false"
+        />
+      </header>
+  <!-- Main -->
+      <main class="relative font-Poppins min-h-screen">
+        <div class="movies-container grid max-[575px]:grid-cols-1 max-[768px]:grid-cols-2 max-[992px]:grid-cols-3 max-[1280px]:grid-cols-4 xl:grid-cols-5 max-[575px]:max-h-full max-[575px]:overflow-auto gap-x-9"></div>
+        <div class="movie-popup-container bg-[#00000080] hidden fixed top-0 left-0 right-0 bottom-0 justify-center items-center max-[575px]:overflow-auto"></div>
+  
+        <div class="error-container hidden absolute text-center w-[100%] top-[100px] m-auto justify-center items-center">
+          <div class="error-text bg-[#13688c] text-white text-xl p-8 rounded-2xl">
+            <h2 class="mb-5">Not found</h2>
+            <p>Please make sure that the movie title you entered is correct.</p>
+          </div>
+        </div>
+        <div class="change-page-container flex justify-center items-center gap-x-4">
+          <button class="prev-page-btn bg-[#13688c] border-none py-1 px-3 rounded-md cursor-pointer disabled:border-gray-400" disabled>Previous page</button>
+          <button class="next-page-btn bg-[#13688c] border-none py-1 px-3 rounded-md cursor-pointer">Next page</button>
+        </div>
+      </main>
+      <!-- Footer -->
+      <footer class="flex justify-center items-center bg-[#13688c] text-xl mt-8 text-center">
+          <p class="max-[575px]:text-sm">made with <i class="fa-solid fa-heart"></i> and <i class="fa-solid fa-mug-hot"></i> by <a href="https://github.com/AmirrezaAPTech">AmirrezaAP</a></p>
+      </footer>
+
+      <script src="./script/main.js"></script>
+</body>
+</html>
